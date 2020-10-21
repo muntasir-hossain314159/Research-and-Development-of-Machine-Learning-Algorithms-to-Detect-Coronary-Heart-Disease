@@ -1,0 +1,77 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 10
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     Cleveland Database-weka.filters.unsupervised.attribute.NumericToNominal-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C25-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C26-Lfirst-last-M-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Remove-R14
+Instances:    243
+Attributes:   26
+              age: age in years
+              sex: sex (1 = male; 0 = female)
+              cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic
+              trestbps: resting blood pressure (in mm Hg on admission to the hospital)
+              htn
+              chol: serum cholestoral in mg/dl
+              smoke
+              cigs (cigarettes per day)
+              years (number of years as a smoker)
+              fbs: (fasting blood sugar > 120 mg/dl)  (1 = true; 0 = false)
+              famhist: family history of coronary artery disease (1 = yes; 0 = no)
+              restecg: resting electrocardiographic results
+              thaldur: duration of exercise test in minutes
+              met: mets achieved
+              thalach: maximum heart rate achieved
+              thalrest: resting heart rate
+              tpeakbps: peak exercise blood pressure (first of 2 parts)
+              tpeakbpd: peak exercise blood pressure (second of 2 parts)
+              trestbpd: resting blood pressure
+              exang: exercise induced angina (1 = yes; 0 = no)
+              xhypo: (1 = yes; 0 = no)
+              oldpeak = ST depression induced by exercise relative to rest
+              slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping
+              ca: number of major vessels (0-3) colored by flourosopy
+              thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+              CLASS num: diagnosis of heart disease (angiographic disease status) -- Value 0: < 50% diameter narrowing -- Value 1: > 50% diameter narrowing (in any major vessel: attributes 59 through 68 are vessels)
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 26 CLASS num: diagnosis of heart disease (angiographic disease status) -- Value 0: < 50% diameter narrowing -- Value 1: > 50% diameter narrowing (in any major vessel: attributes 59 through 68 are vessels)):
+	ReliefF Ranking Filter
+	Instances sampled: all
+	Number of nearest neighbours (k): 10
+	Equal influence nearest neighbours
+
+Ranked attributes:
+ 0.163786   25 thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+ 0.103292    2 sex: sex (1 = male; 0 = female)
+ 0.099863   24 ca: number of major vessels (0-3) colored by flourosopy
+ 0.086008    3 cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic
+ 0.068313   20 exang: exercise induced angina (1 = yes; 0 = no)
+ 0.052058   12 restecg: resting electrocardiographic results
+ 0.045679   11 famhist: family history of coronary artery disease (1 = yes; 0 = no)
+ 0.029397   22 oldpeak = ST depression induced by exercise relative to rest
+ 0.023305   15 thalach: maximum heart rate achieved
+ 0.022428   23 slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping
+ 0.01657     4 trestbps: resting blood pressure (in mm Hg on admission to the hospital)
+ 0.016049    7 smoke
+ 0.012424   13 thaldur: duration of exercise test in minutes
+ 0.010988   14 met: mets achieved
+ 0.009995   17 tpeakbps: peak exercise blood pressure (first of 2 parts)
+ 0.007186    9 years (number of years as a smoker)
+ 0.006797   19 trestbpd: resting blood pressure
+ 0.005761    5 htn
+ 0.005101    1 age: age in years
+ 0.003297   18 tpeakbpd: peak exercise blood pressure (second of 2 parts)
+ 0.002881   10 fbs: (fasting blood sugar > 120 mg/dl)  (1 = true; 0 = false)
+ 0.000953   16 thalrest: resting heart rate
+-0.001646   21 xhypo: (1 = yes; 0 = no)
+-0.001655    6 chol: serum cholestoral in mg/dl
+-0.003064    8 cigs (cigarettes per day)
+
+Selected attributes: 25,2,24,3,20,12,11,22,15,23,4,7,13,14,17,9,19,5,1,18,10,16,21,6,8 : 25
+
