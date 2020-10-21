@@ -1,0 +1,90 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 0.2 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     Cleveland Database-weka.filters.unsupervised.attribute.NumericToNominal-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C25-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C26-Lfirst-last-M-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Remove-R14-weka.filters.unsupervised.attribute.Remove-R1,4-10,13-14,16-19,21-weka.filters.unsupervised.attribute.NumericToNominal-R2,8,9,10-weka.filters.unsupervised.attribute.NumericToBinary-R1,3,6-weka.filters.unsupervised.attribute.NumericToNominal-R4
+Instances:    243
+Attributes:   11
+              sex: sex (1 = male; 0 = female)_binarized
+              cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic
+              famhist: family history of coronary artery disease (1 = yes; 0 = no)_binarized
+              restecg: resting electrocardiographic results
+              thalach: maximum heart rate achieved
+              exang: exercise induced angina (1 = yes; 0 = no)_binarized
+              oldpeak = ST depression induced by exercise relative to rest
+              slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping
+              ca: number of major vessels (0-3) colored by flourosopy
+              thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+              CLASS num: diagnosis of heart disease (angiographic disease status) -- Value 0: < 50% diameter narrowing -- Value 1: > 50% diameter narrowing (in any major vessel: attributes 59 through 68 are vessels)
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.4571 * (normalized) sex: sex (1 = male; 0 = female)_binarized=1
+ +      -0.487  * (normalized) cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=1
+ +      -0.0208 * (normalized) cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=2
+ +      -0.185  * (normalized) cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=3
+ +       0.6929 * (normalized) cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=4
+ +       0.1224 * (normalized) famhist: family history of coronary artery disease (1 = yes; 0 = no)_binarized=1
+ +      -0.2169 * (normalized) restecg: resting electrocardiographic results=0
+ +       0.2    * (normalized) restecg: resting electrocardiographic results=1
+ +       0.0169 * (normalized) restecg: resting electrocardiographic results=2
+ +      -0.338  * (normalized) thalach: maximum heart rate achieved
+ +       0.5087 * (normalized) exang: exercise induced angina (1 = yes; 0 = no)_binarized=1
+ +       0.5245 * (normalized) oldpeak = ST depression induced by exercise relative to rest
+ +      -0.157  * (normalized) slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping=1
+ +       0.2759 * (normalized) slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping=2
+ +      -0.1189 * (normalized) slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping=3
+ +      -0.8577 * (normalized) ca: number of major vessels (0-3) colored by flourosopy=0
+ +       0.0803 * (normalized) ca: number of major vessels (0-3) colored by flourosopy=1
+ +       0.3792 * (normalized) ca: number of major vessels (0-3) colored by flourosopy=2
+ +       0.3982 * (normalized) ca: number of major vessels (0-3) colored by flourosopy=3
+ +      -0.582  * (normalized) thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=3
+ +       0.113  * (normalized) thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=6
+ +       0.469  * (normalized) thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=7
+ -       0.3389
+
+Number of kernel evaluations: 5949 (75.879% cached)
+
+
+
+Time taken to build model: 0.1 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          26               86.6667 %
+Incorrectly Classified Instances         4               13.3333 %
+Kappa statistic                          0.7143
+Mean absolute error                      0.1333
+Root mean squared error                  0.3651
+Relative absolute error                 27.1769 %
+Root relative squared error             74.1022 %
+Total Number of Instances               30     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.944    0.250    0.850      0.944    0.895      0.722    0.847     0.836     0
+                 0.750    0.056    0.900      0.750    0.818      0.722    0.847     0.775     1
+Weighted Avg.    0.867    0.172    0.870      0.867    0.864      0.722    0.847     0.812     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 17  1 |  a = 0
+  3  9 |  b = 1
+

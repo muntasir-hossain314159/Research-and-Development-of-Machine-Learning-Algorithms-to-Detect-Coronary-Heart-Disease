@@ -1,0 +1,86 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M 1 -num-decimal-places 4
+Relation:     Cleveland Database-weka.filters.unsupervised.attribute.NumericToNominal-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C25-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C26-Lfirst-last-M-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Remove-R14-weka.filters.unsupervised.attribute.Remove-R1,4-19,21-23-weka.filters.unsupervised.attribute.NumericToBinary-R1,3-weka.filters.unsupervised.attribute.NumericToNominal-R2,4,5
+Instances:    243
+Attributes:   6
+              sex: sex (1 = male; 0 = female)_binarized
+              cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic
+              exang: exercise induced angina (1 = yes; 0 = no)_binarized
+              ca: number of major vessels (0-3) colored by flourosopy
+              thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+              CLASS num: diagnosis of heart disease (angiographic disease status) -- Value 0: < 50% diameter narrowing -- Value 1: > 50% diameter narrowing (in any major vessel: attributes 59 through 68 are vessels)
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                                                                                                                        Class
+Variable                                                                                                                                    0
+=============================================================================================================================================
+sex: sex (1 = male; 0 = female)_binarized=1                                                                                           -1.5874
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=1     1.0196
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=2     1.5591
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=3     1.8122
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=4    -2.5866
+exang: exercise induced angina (1 = yes; 0 = no)_binarized=1                                                                          -2.1839
+ca: number of major vessels (0-3) colored by flourosopy=0                                                                              2.4593
+ca: number of major vessels (0-3) colored by flourosopy=1                                                                              -1.368
+ca: number of major vessels (0-3) colored by flourosopy=2                                                                             -1.9882
+ca: number of major vessels (0-3) colored by flourosopy=3                                                                             -2.3252
+thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=3                                                                            2.7598
+thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=6                                                                           -1.3266
+thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=7                                                                           -2.6278
+Intercept                                                                                                                              1.1341
+
+
+Odds Ratios...
+                                                                                                                                        Class
+Variable                                                                                                                                    0
+=============================================================================================================================================
+sex: sex (1 = male; 0 = female)_binarized=1                                                                                            0.2045
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=1     2.7722
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=2     4.7546
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=3      6.124
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic=4     0.0753
+exang: exercise induced angina (1 = yes; 0 = no)_binarized=1                                                                           0.1126
+ca: number of major vessels (0-3) colored by flourosopy=0                                                                             11.6962
+ca: number of major vessels (0-3) colored by flourosopy=1                                                                              0.2546
+ca: number of major vessels (0-3) colored by flourosopy=2                                                                              0.1369
+ca: number of major vessels (0-3) colored by flourosopy=3                                                                              0.0978
+thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=3                                                                           15.7971
+thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=6                                                                            0.2654
+thal: 3 = normal; 6 = fixed defect; 7 = reversable defect=7                                                                            0.0722
+
+
+Time taken to build model: 0.07 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          25               83.3333 %
+Incorrectly Classified Instances         5               16.6667 %
+Kappa statistic                          0.6575
+Mean absolute error                      0.1803
+Root mean squared error                  0.3598
+Relative absolute error                 36.7493 %
+Root relative squared error             73.0261 %
+Total Number of Instances               30     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.833    0.167    0.882      0.833    0.857      0.659    0.905     0.942     0
+                 0.833    0.167    0.769      0.833    0.800      0.659    0.905     0.856     1
+Weighted Avg.    0.833    0.167    0.837      0.833    0.834      0.659    0.905     0.908     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 15  3 |  a = 0
+  2 10 |  b = 1
+

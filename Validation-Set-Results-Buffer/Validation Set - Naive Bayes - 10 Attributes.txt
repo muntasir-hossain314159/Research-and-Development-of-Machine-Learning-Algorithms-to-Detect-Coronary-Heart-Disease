@@ -1,0 +1,118 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     Cleveland Database-weka.filters.unsupervised.attribute.NumericToNominal-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C8-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C9-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C25-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C26-Lfirst-last-M-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Remove-R14-weka.filters.unsupervised.attribute.Remove-R1,4-10,13-14,16-19,21-weka.filters.unsupervised.attribute.NumericToNominal-R2,8,9,10-weka.filters.unsupervised.attribute.NumericToBinary-R1,3,6-weka.filters.unsupervised.attribute.NumericToNominal-R4
+Instances:    243
+Attributes:   11
+              sex: sex (1 = male; 0 = female)_binarized
+              cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic
+              famhist: family history of coronary artery disease (1 = yes; 0 = no)_binarized
+              restecg: resting electrocardiographic results
+              thalach: maximum heart rate achieved
+              exang: exercise induced angina (1 = yes; 0 = no)_binarized
+              oldpeak = ST depression induced by exercise relative to rest
+              slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping
+              ca: number of major vessels (0-3) colored by flourosopy
+              thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+              CLASS num: diagnosis of heart disease (angiographic disease status) -- Value 0: < 50% diameter narrowing -- Value 1: > 50% diameter narrowing (in any major vessel: attributes 59 through 68 are vessels)
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                                                                                                                      Class
+Attribute                                                                                                                                 0        1
+                                                                                                                                     (0.55)   (0.45)
+=====================================================================================================================================================
+sex: sex (1 = male; 0 = female)_binarized
+  0                                                                                                                                     62.0     21.0
+  1                                                                                                                                     73.0     91.0
+  [total]                                                                                                                              135.0    112.0
+
+cp: chest pain type -- Value 1: typical angina -- Value 2: atypical angina -- Value 3: non-anginal pain -- Value 4: asymptomatic
+  1                                                                                                                                     12.0      5.0
+  2                                                                                                                                     30.0      8.0
+  3                                                                                                                                     61.0     17.0
+  4                                                                                                                                     34.0     84.0
+  [total]                                                                                                                              137.0    114.0
+
+famhist: family history of coronary artery disease (1 = yes; 0 = no)_binarized
+  0                                                                                                                                     56.0     37.0
+  1                                                                                                                                     79.0     75.0
+  [total]                                                                                                                              135.0    112.0
+
+restecg: resting electrocardiographic results
+  0                                                                                                                                     74.0     42.0
+  1                                                                                                                                      2.0      2.0
+  2                                                                                                                                     60.0     69.0
+  [total]                                                                                                                              136.0    113.0
+
+thalach: maximum heart rate achieved
+  mean                                                                                                                              158.3448  140.052
+  std. dev.                                                                                                                          19.6731  21.7043
+  weight sum                                                                                                                             133      110
+  precision                                                                                                                           1.3103   1.3103
+
+exang: exercise induced angina (1 = yes; 0 = no)_binarized
+  0                                                                                                                                    113.0     52.0
+  1                                                                                                                                     22.0     60.0
+  [total]                                                                                                                              135.0    112.0
+
+oldpeak = ST depression induced by exercise relative to rest
+  mean                                                                                                                                0.6312   1.5949
+  std. dev.                                                                                                                           0.8217   1.2831
+  weight sum                                                                                                                             133      110
+  precision                                                                                                                           0.1676   0.1676
+
+slope: the slope of the peak exercise ST segment -- Value 1: upsloping -- Value 2: flat -- Value 3: downsloping
+  1                                                                                                                                     84.0     33.0
+  2                                                                                                                                     44.0     70.0
+  3                                                                                                                                      8.0     10.0
+  [total]                                                                                                                              136.0    113.0
+
+ca: number of major vessels (0-3) colored by flourosopy
+  0                                                                                                                                    106.0     36.0
+  1                                                                                                                                     21.0     39.0
+  2                                                                                                                                      7.0     24.0
+  3                                                                                                                                      3.0     15.0
+  [total]                                                                                                                              137.0    114.0
+
+thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+  3                                                                                                                                    109.0     32.0
+  6                                                                                                                                      4.0      8.0
+  7                                                                                                                                     23.0     73.0
+  [total]                                                                                                                              136.0    113.0
+
+
+
+Time taken to build model: 0.03 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          27               90      %
+Incorrectly Classified Instances         3               10      %
+Kappa statistic                          0.7945
+Mean absolute error                      0.1438
+Root mean squared error                  0.2893
+Relative absolute error                 29.3108 %
+Root relative squared error             58.7054 %
+Total Number of Instances               30     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.889    0.083    0.941      0.889    0.914      0.796    0.963     0.976     0
+                 0.917    0.111    0.846      0.917    0.880      0.796    0.963     0.955     1
+Weighted Avg.    0.900    0.094    0.903      0.900    0.901      0.796    0.963     0.968     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 16  2 |  a = 0
+  1 11 |  b = 1
+
